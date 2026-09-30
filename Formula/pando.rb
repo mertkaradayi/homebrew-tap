@@ -1,39 +1,39 @@
 class Pando < Formula
   desc "One repo. Every branch alive."
   homepage "https://mertkaradayi.github.io/pando/"
-  version "0.6.1"
+  version "0.6.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.1/pando-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "2aa285e427e7f133dabbd663edccca54aebc811de909ceb5f19b1a905c337b04"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.2/pando-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "9c48400fa1bd21bd23b37bcadf972b6d477f9750e996840f37e9ee6211378620"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.1/pando-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "3ee571fa2bdca440c5a72ff2e7a6c5ea3bbc1089cab308f566c4b8a1adee9297"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.2/pando-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "b5c6b7b05ff2735e15f6ffa68533765c5db5d714c3078cae8cc2d1cb223bb6a5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.1/pando-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "88e55b7ce1879fe84b8621c333769cb659ba1992f676bddddeb35226af940329"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.2/pando-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "6db402d4625aeb8ce48953faf3897fd7c19177d66975c710f2d920cb925862d6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.1/pando-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "07bfcea55a2adfb361a3da59805f733070ed22361f3640b4f2e2c31845cc8152"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.6.2/pando-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "871d6646aaaa65281c30e2d2162c74a11958636b677671529cfd913262dff4d3"
     end
   end
   license "AGPL-3.0-only"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":               {},
-    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-apple-darwin": {},
+    "aarch64-unknown-linux-gnu": {},
     "aarch64-unknown-linux-musl-dynamic": {},
-    "aarch64-unknown-linux-musl-static":  {},
-    "x86_64-apple-darwin":                {},
-    "x86_64-unknown-linux-gnu":           {},
-    "x86_64-unknown-linux-musl-dynamic":  {},
-    "x86_64-unknown-linux-musl-static":   {},
-  }.freeze
+    "aarch64-unknown-linux-musl-static": {},
+    "x86_64-apple-darwin": {},
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
