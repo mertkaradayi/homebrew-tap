@@ -1,25 +1,25 @@
 class Pando < Formula
   desc "One repo. Every branch alive."
   homepage "https://mertkaradayi.github.io/pando/"
-  version "0.11.0"
+  version "0.11.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.0/pando-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "726e323f8d6cb18b9e1b74d793522e0641e08ef2a715381af51ceca6c2108540"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.1/pando-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "858ef332b717b2c27ab62059437e4dc8b935c9c6aba0ca35ef24b1e28ede0d9c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.0/pando-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "979b1f99e7bc2b11fb0c3d31380eef4e8fef709020e11e3e0ab23b98f1dd4fca"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.1/pando-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "bdf2b5dc84ccccb00a39e9828498f32cfc952a7825f1a3fde424a241dfc65266"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.0/pando-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "249ee527a2f38de4984fbdee2fd1ec2b6f23cd540e441b0f9e2bddfd6310006b"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.1/pando-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "a210021b5b24d1dbeb0fdb6e5d106b28608c4a6804ae054b349b297b770073c1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.0/pando-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "557906fa4c8583164431f2c9babbe61e2cf7d8bb305abf2635d0223499e0d70b"
+      url "https://github.com/mertkaradayi/pando/releases/download/v0.11.1/pando-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "81d2a93fa83a7a014616b6df22503165435b09a4dbea6cea24809e42c94bfa7b"
     end
   end
   license "AGPL-3.0-only"
